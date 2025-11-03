@@ -6,7 +6,7 @@
     },
     "editor.bracketPairColorization.enabled": true,
     "editor.detectIndentation": false,
-    "editor.fontSize": 14,
+    "editor.fontSize": 12,
     "editor.guides.bracketPairs": true,
     "editor.minimap.enabled": false,
     "editor.multiCursorModifier": "ctrlCmd",
@@ -59,8 +59,9 @@
     "git.enabled": false,
     "notebook.diff.ignoreMetadata": true,
     "notebook.lineNumbers": "on",
-    "notebook.markup.fontSize": 13,
-    "python.defaultInterpreterPath": "~/.pyenv/shims/python",
+    "notebook.markup.fontSize": 15,
+    "notebook.markup.fontFamily": "",
+    "python.defaultInterpreterPath": "/home/jerome-roeser/.pyenv/versions/3.12.4",
     "python.formatting.provider": "yapf",
     "python.languageServer": "Pylance",
     "python.linting.enabled": false,
@@ -83,5 +84,43 @@
     "workbench.settings.openDefaultSettings": true,
     "workbench.settings.useSplitJSON": true,
     "workbench.startupEditor": "newUntitledFile",
-    "workbench.panel.defaultLocation": "right",
+    "workbench.panel.defaultLocation": "bottom",
+    "files.autoSave": "afterDelay",
+    "terminal.integrated.fontSize": 12,
+    "debug.console.fontSize": 12,
+    // "markdown.preview.fontSize": 14,
+    // "markdown.preview.lineHeight": 1.6,
+    "jupyter.runStartupCommands": [
+      "%load_ext autoreload",
+      "%autoreload 2"
+      ],
+    "notebook.cellToolbarLocation": {
+      "default": "right",
+      "jupyter-notebook": "right"
+    },
+    "makefile.configureOnOpen": true,
+    "github.copilot.enable": {
+      "*": true,
+      "plaintext": false,
+      "markdown": false,
+      "scminput": false
+    },
+    "jupyter.widgetScriptSources": [
+      "jsdelivr.com",
+      "unpkg.com"
+    ],
+    "workbench.editorAssociations": {
+      "*.copilotmd": "vscode.markdown.preview.editor",
+      "*.html": "default"
+    },
+    "security.workspace.trust.untrustedFiles": "open",
+    "jupyter.askForKernelRestart": false,
+    "github.copilot.advanced": {
+
+    },
+    "python.analysis.typeCheckingMode": "off",
+    "workbench.colorTheme": "Default Dark+",
+    "containers.images.label": "CreatedTime",
+    "containers.images.sortBy": "Size",
+    "outline.collapseItems": "alwaysCollapse"
 }

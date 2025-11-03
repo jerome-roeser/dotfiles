@@ -4,7 +4,7 @@ ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="robbyrussell"
 
 # Useful oh-my-zsh plugins for Le Wagon bootcamps
-plugins=(git gitfast last-working-dir common-aliases zsh-syntax-highlighting history-substring-search)
+plugins=(git gitfast last-working-dir common-aliases zsh-syntax-highlighting history-substring-search ssh-agent direnv poetry)
 
 # (macOS-only) Prevent Homebrew from reporting - https://github.com/Homebrew/brew/blob/master/docs/Analytics.md
 export HOMEBREW_NO_ANALYTICS=1
@@ -70,3 +70,22 @@ export EDITOR=code
 
 # Set ipdb as the default Python debugger
 export PYTHONBREAKPOINT=ipdb.set_trace
+
+
+export GOOGLE_APPLICATION_CREDENTIALS=/home/jerome-roeser/code/jerome-roeser/gcp/le-wagon-data-411310-7c498969c3b9.json
+# echo 'export GOOGLE_APPLICATION_CREDENTIALS=/path/to/the/SERVICE_ACCOUNT_JSON_FILE_CONTAINING_YOUR_SECRET_KEY.json' >> ~/.zshrc
+
+# For Olist Project !! Bad Practice !!
+export PYTHONPATH="/home/jerome-roeser/code/jerome-roeser/04-Decision-Science/01-Project-Setup/data-context-and-setup-redo-2024-10-04:$PYTHONPATH"
+
+# Created by `pipx` on 2024-10-17 20:00:40
+export PATH="$PATH:/home/jerome-roeser/.local/bin"
+
+# FullProf installation
+FULLPROF="/opt/fullprof_suite"
+PATH=$PATH:$FULLPROF
+export FULLPROF
+
+# Enable shell autocompletion for uv & uvx commands
+eval "$(uv generate-shell-completion zsh)"
+eval "$(uvx --generate-shell-completion zsh)"

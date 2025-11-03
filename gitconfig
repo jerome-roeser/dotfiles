@@ -45,6 +45,8 @@
   # Removes a file from the index
   unstage = reset HEAD --
 
+  access-url-work = !git config --global url."git@github.com-work:".insteadOf "git@github.com:"
+
 [help]
   autocorrect = 1
 
@@ -58,7 +60,27 @@
   rebase = false
 
 [init]
-  defaultBranch = master
+  defaultBranch = main
+
 [user]
 	email = jerome.roeser@gmail.com
 	name = jerome roeser
+
+[includeIf "gitdir:~/code/dev/work/"]
+    path = ~/.gitconfig-work
+
+[credential "https://github.com"]
+	helper =
+	helper = !/usr/bin/gh auth git-credential
+
+[credential "https://gist.github.com"]
+	helper =
+	helper = !/usr/bin/gh auth git-credential
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+
+# Automatically added
+
